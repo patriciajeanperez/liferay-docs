@@ -11,12 +11,10 @@ instance:
 
 2.  Provide the information below for your app:
 
-    **Title:** The name displayed in Documents and Media.
-
-    **Domain Name:** The application's domain name along with the port (e.g., 
+    - **Title:** The name displayed in Documents and Media.
+    - **Domain Name:** The application's domain name along with the port (e.g., 
     `localhost:8228`)
-
-    **Redirect URL:** The application's URL. The URL must use HTTPS.
+    - **Redirect URL:** The application's URL. The URL must use HTTPS.
 
 3.  Click the two *Generate* buttons to generate a client ID and client secret 
     for @product@.
