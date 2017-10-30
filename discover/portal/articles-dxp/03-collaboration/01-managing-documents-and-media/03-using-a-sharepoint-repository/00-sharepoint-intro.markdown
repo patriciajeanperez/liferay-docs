@@ -8,15 +8,17 @@ Media Library to access your SharePoint files.
 +$$$
 
 The Liferay Sharepoint Connector uses Azure ACS with OAuth 2 for SharePoint 
-server authorization. So **you must enable HTTPS support in your app server to 
-use the Liferay SharePoint Connector.** Please consult your app server's 
-documentation for details. For instance, the required steps for 
-Tomcat can be found in their [documentation](https://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html).
+server authorization. Therefore, you must enable HTTPS support in your app 
+server to use the Liferay SharePoint Connector. Please consult your app server's 
+documentation for details. For instance, the required steps for Tomcat can be 
+found in 
+[its documentation](https://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html).
 
 $$$
 
-The [Liferay Sharepoint Connector](https://web.liferay.com/marketplace/-/mp/application/15188537)
-app is available to EE subscribers on Liferay's [Marketplace](http://marketplace.liferay.com/).
+[The Liferay Sharepoint Connector app](https://web.liferay.com/marketplace/-/mp/application/15188537) 
+is available to EE subscribers on Liferay's 
+[Marketplace](http://marketplace.liferay.com/). 
 
 The Liferay Sharepoint Connector provides these key benefits: 
 
@@ -27,15 +29,15 @@ The Liferay Sharepoint Connector provides these key benefits:
 - Getting revision history
 - Reverting to a revision
 
-The Liferay SharePoint Connector uses SharePoint's API, which has the 
-limitations shown below:
+The Liferay SharePoint Connector uses SharePoint's API, which has these 
+limitations: 
 
 - Version history is lost when moving or renaming a file without first 
   checking it out.
 - You can't change file extensions, you can only change file names.
 - A file's current name propagates to all previous versions.
-- The user who checks out a file is the only one who can see its working copy 
-  version number.
+- The user who checks out a file is the only one who can see the version number 
+  of that file's working copy.
 - Queries for suffixes or intermediate wildcards convert to queries for 
   containment.  
 - Comments, ratings, and using a SharePoint folder as a Documents and Media root 
@@ -43,4 +45,4 @@ limitations shown below:
 
 To use a SharePoint repository in Documents and Media, you must first create 
 an application in SharePoint and authorize it to access the repository. The 
-guides in this section walk you through this process.
+guides in this section walk you through this process. 
