@@ -1,24 +1,31 @@
 # Using a SharePoint Repository [](id=using-a-sharepoint-repository)
 
-Liferay's Sharepoint Connector app lets users access SharePoint 2013 and 
+Liferay's SharePoint Connector app lets users access SharePoint 2013 and 
 SharePoint 2016 libraries from @product@'s Documents and Media Library. Once 
 installed, you can add a SharePoint repository type to @product@'s Documents and 
 Media Library to access your SharePoint files.
 
 +$$$
 
-The Liferay Sharepoint Connector uses Azure ACS with OAuth 2 for SharePoint 
-server authorization. Therefore, you must enable HTTPS support in your app 
-server to use the Liferay SharePoint Connector. Please consult your app server's 
-documentation for details. For instance, the required steps for Tomcat can be 
-found in 
+**Note:** To access SharePoint 2010, you must use 
+[the old version](https://web.liferay.com/marketplace/-/mp/application/15188537) 
+of the SharePoint Connector app. 
+
+$$$
+
++$$$
+
+**Note:** The Liferay Sharepoint Connector uses Azure ACS with OAuth 2 for 
+SharePoint server authorization. Therefore, you must enable HTTPS support in 
+your app server to use the Liferay SharePoint Connector. Please consult your app 
+server's documentation for details. For example, the required steps for Tomcat 
+can be found in 
 [its documentation](https://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html).
 
 $$$
 
-[The Liferay Sharepoint Connector app](https://web.liferay.com/marketplace/-/mp/application/15188537) 
-is available to EE subscribers on Liferay's 
-[Marketplace](http://marketplace.liferay.com/). 
+The Liferay Sharepoint Connector app is available to EE subscribers on 
+[Liferay's Marketplace](http://marketplace.liferay.com/). 
 
 The Liferay Sharepoint Connector provides these key benefits: 
 
