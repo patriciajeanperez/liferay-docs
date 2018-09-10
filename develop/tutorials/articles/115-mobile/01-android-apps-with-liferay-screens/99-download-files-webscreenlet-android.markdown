@@ -98,29 +98,34 @@ initiates a file download when the file's download link is clicked:
             });
         }
 
-Now you have to add this file to the WebScreenlet configuration, as explained [here](https://dev.liferay.com/develop/reference/-/knowledge_base/7-0/web-screenlet-for-android#configuration).
+2.  Implement Web Screenlet's listener, `WebListener`, 
+    [as instructed in the Web Screenlet tutorial](/develop/tutorials/-/knowledge_base/7-0/rendering-web-pages-in-your-android-app#implementing-web-screenlets-listener). 
+    Note that you must implement `onScriptMessageHandler` to handle the file 
+    download: 
 
-Once you are done doing this, you have to implement the WebScreenletDelegate, specifically the method: 
+        public void onScriptMessageHandler(String namespace, String body) {
+            if ("download".equals(namespace)) {
+                // handle file download
+            }
+        }
 
-```
-public void onScriptMessageHandler(String namespace, String body) {
-	if ("download".equals(namespace)) {
-		// handle file download
-	}
-}
-```
+    For instructions on handling the file download, see the 
+    [downloading files tutorial](liferay.com). 
 
-The last thing you have to do is handling the file download, for this, you will have to follow this tutorial >>link to the downloading files tutorial>>
+3.  Add the file you created in the first step to the Web Screenlet 
+    configuration. Do this by 
+    [setting Web Screenlet's parameters](/develop/tutorials/-/knowledge_base/7-0/rendering-web-pages-in-your-android-app#setting-web-screenlets-parameters).
 
-**Note**
-If after doing this, the default behavior is not removed or you are experiencing other issues, just remove all the js applied to that html element adding this lines to the script:
+If these steps don't produce the desired behavior, try adding the following to 
+the JavaScript file you created in the first step: 
+<!-- 
+Where exactly should this code be added?
 
-```
-var clone = element.cloneNode(true);
-element.parentNode.replaceChild(clone, element);
+In original text: "...remove all the js applied to that html element..."
+Why do this?
+-->
 
-/*assign here the listener as before*/
-```
+    var clone = element.cloneNode(true);
+    element.parentNode.replaceChild(clone, element);
 
-
-
+    /*assign here the listener as before*/
