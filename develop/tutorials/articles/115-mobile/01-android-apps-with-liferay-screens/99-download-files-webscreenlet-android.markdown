@@ -129,3 +129,65 @@ Where exactly should this code be added?
     element.parentNode.replaceChild(clone, element);
 
     /*assign here the listener as before*/
+
+## Getting the Cookie from Web Screenlet
+
+To authenticate the request, you can get the cookie from Web Screenlet. Note, 
+however, that this cookie will eventually expire and you can't use Web Screenlet 
+to get authentication credentials to refresh it. You therefore shouldn't store 
+the cookie for later use---only use it to authenticate requests initiated by 
+link clicks in Web Screenlet, as detailed above. 
+
+Follow these steps to get and use the cookie from Web Screenlet: 
+
+1.  After 
+    [setting Web Screenlet's configuration](/develop/tutorials/-/knowledge_base/7-0/rendering-web-pages-in-your-android-app#setting-web-screenlets-parameters), 
+    get the cookie via Android's 
+    [`CookieManager`](https://developer.android.com/reference/android/webkit/CookieManager): 
+
+        String cookieValue = CookieManager.getInstance().getCookie("url-of-the-webscreenlet");
+
+    Be sure to use your Web Screenlet's URL as the argument to `getCookie`. 
+    <!-- How will developers know what this URL is? -->
+
+2.  Add the cookie to the request object as the `Cookie` header's value: 
+
+        testRequest.addHeader('Cookie', cookieValue);
+
+To make a request to the JSONWS services, you'll use a slightly different 
+workflow. Specifically, you must get the `authToken` and then use it (and the 
+cookie) to create the session via the Liferay Mobile SDK class 
+`CookieAuthentication`. Follow these steps to do so: 
+
+1.  Get the `authToken` via JavaScript: 
+
+        // Script that notify native with the value of authToken
+        JsScript script = new JsScript("grabAuthToken",
+            "window.Screens.postMessage('authToken', Liferay.authToken)");
+
+        webScreenlet.injectScript(script);
+
+    For instructions on using JavaScript with Web Screenlet, see the 
+    [Web Screenlet tutorial](/develop/tutorials/-/knowledge_base/7-0/rendering-web-pages-in-your-android-app). 
+
+2.  Web Screenlet's listener method `onScriptMessageHandler` receives the 
+    `authToken` in its `body` argument. Implement this method to create a 
+    `CookieAuthentication` from the `authToken` and cookie. Use the 
+    `CookieAuthentication` to create the session, then use the session to call 
+    the JSONWS services you need: 
+
+        public void onScriptMessageHandler(String namespace, String body) {
+            if ("grabAuthToken".equals(namespace)) {
+
+                String authToken = body;
+                String cookieValue = CookieManager.getInstance().getCookie(url);
+
+                // Do not save this authentication
+                CookieAuthentication auth = new CookieAuthentication(authToken, 
+                    cookieValue, "", "", false, 0, 0);
+
+                Session session = new SessionImpl("your-server-url", auth)
+
+                // Use the session to call JSONWS services
+            }
+        }
