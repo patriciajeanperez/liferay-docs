@@ -42,7 +42,9 @@ do so:
 
         LiferayServerContext.getAuthHeaders()
 
-3.  Use the session and the headers to retrieve a file from the portal. 
+3.  Use the session and the headers to retrieve a file from the portal. Note 
+    that how you do this depends on the file you're retrieving and your 
+    server---there's no average or typical use case. 
 <!-- 
 How do you get files from the portal? Add an example. 
 -->
