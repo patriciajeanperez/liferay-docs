@@ -42,23 +42,25 @@ Mobile SDK:
 
 Follow these steps to download a file: 
 
-1.  Get the authentication headers: 
-
-    -   Get an `Authentication` object from the session. 
-    -   Create a `Request` object.
-    -   Authenticate the request by calling its `authenticate` method with the 
-        `Authentication` object. 
-    -   Call the request's `getHeaders()` method to get the authentication 
-        headers. 
+1.  Get an `Authentication` object from the session: 
 
         Authentication auth = yourSession.getAuthentication();
+
+2.  Create a `Request` object:
+
         com.liferay.mobile.android.http.Request dummyRequest =
                 new com.liferay.mobile.android.http.Request(null, null, null, null, 0);
 
+3.  Authenticate the request by calling its `authenticate` method with the 
+    `Authentication` object: 
+
         dummyRequest.authenticate(auth);
+
+4.  Get the authentication headers by calling the request's `getHeaders()` 
+    method: 
 
         Map<String, String> headers = dummyRequest.getHeaders();
 
-2.  Use the session and the headers to retrieve a file from the portal. Note 
+5.  Use the session and the headers to retrieve a file from the portal. Note 
     that how you do this depends on the file you're retrieving and your 
     server---there's no average or typical use case. 
