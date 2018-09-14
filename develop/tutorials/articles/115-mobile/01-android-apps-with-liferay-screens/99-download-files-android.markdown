@@ -33,18 +33,15 @@ the session and use it to download files from the portal. Follow these steps to
 do so: 
 
 1.  Get the session with the `SessionContext` method 
-    `createSessionForCurrentContext()`: 
+    `createSessionFromCurrentSession()`: 
 
-        SessionContext.createSessionForCurrentContext()
+        Session session = SessionContext.createSessionFromCurrentSession();
 
 2.  Get the authentication headers with the `LiferayServerContext` method 
     `getAuthHeaders()`: 
 
-        LiferayServerContext.getAuthHeaders()
+        Map<String, String> headers = LiferayServerContext.getAuthHeaders();
 
 3.  Use the session and the headers to retrieve a file from the portal. Note 
     that how you do this depends on the file you're retrieving and your 
     server---there's no average or typical use case. 
-<!-- 
-How do you get files from the portal? Add an example. 
--->

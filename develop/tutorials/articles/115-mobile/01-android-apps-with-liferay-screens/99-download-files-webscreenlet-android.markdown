@@ -45,11 +45,11 @@ Note that the portal page may contain its own custom listeners on the link. If
 you get unexpected behavior, you may need to remove those listeners in Web 
 Screenlet. To do so, add a JavaScript file to your app that contains this code: 
 
-    /*replace this with your own logic to look for wanted a elements*/
+    /*Replace this with your own logic to look for wanted a-elements*/
     var aElements = document.getElementsByTagName('a');
 
     for (var i = 0; i < aElementsDocument.length; i++) {
-        /*Remove all listener attached to the element*/
+        /*Remove all listeners attached to the element*/
         var clone = element.cloneNode(true);
         element.parentNode.replaceChild(clone, element);
     }
@@ -81,7 +81,7 @@ initiates a file download when the user clicks the file's link:
 
         var aElementsDocument = aElementsArray.filter(x => x.href.indexOf('documents/') !== -1);
 
-        /*Adding a click event to the elements*/
+        /*Add a click event to each element*/
         for (var i = 0; i < aElementsDocument.length; i++) {
             var element = aElementsDocument[i];
 
@@ -90,11 +90,11 @@ initiates a file download when the user clicks the file's link:
 
         function addEvent(element) {
             element.addEventListener('click', function(event) {
-                /*Removing default click behavior*/
+                /*Remove default click behavior*/
                 event.preventDefault();
                 event.stopPropagation();
 
-                /*Sending the url to the native part*/
+                /*Send the URL to the native part*/
                 window.Screens.postMessage('download', element.href);
             });
         }
@@ -120,15 +120,21 @@ initiates a file download when the user clicks the file's link:
 Note that the portal page may contain its own custom listeners on the link. If 
 you get unexpected behavior, you may need to remove those listeners in Web 
 Screenlet. To do this, add the following code to the JavaScript file you created 
-in the first step: 
-<!-- 
-Where exactly should this code be added?
--->
+in the first step, immediately prior to the `addEvent` call in the `for` loop: 
 
     var clone = element.cloneNode(true);
     element.parentNode.replaceChild(clone, element);
 
-    /*assign here the listener as before*/
+The resulting `for` loop should look like this: 
+
+    for (var i = 0; i < aElementsDocument.length; i++) {
+        var element = aElementsDocument[i];
+
+        var clone = element.cloneNode(true);
+        element.parentNode.replaceChild(clone, element);
+
+        addEvent(element)
+    }
 
 ## Getting the Cookie from Web Screenlet
 
