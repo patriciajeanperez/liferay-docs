@@ -153,8 +153,10 @@ Follow these steps to get and use the cookie from Web Screenlet:
 
         String cookieValue = CookieManager.getInstance().getCookie("url-of-the-webscreenlet");
 
-    Be sure to use your Web Screenlet's URL as the argument to `getCookie`. 
-    <!-- How will developers know what this URL is? -->
+    Be sure to use your Web Screenlet's URL as the argument to `getCookie`. You 
+    can get this URL from the Screenlet instance's `WebView`: 
+
+        String webScreenletURL = screenlet.getWebView().getUrl();
 
 2.  Add the cookie to the request object as the `Cookie` header's value: 
 
