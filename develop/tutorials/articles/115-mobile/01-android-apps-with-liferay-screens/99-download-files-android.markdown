@@ -45,3 +45,14 @@ do so:
 3.  Use the session and the headers to retrieve a file from the portal. Note 
     that how you do this depends on the file you're retrieving and your 
     server---there's no average or typical use case. 
+
+    Note that to get a file from the Documents and Media Library, you must use 
+    that file's URL. To get such a file's URL, click the file in the Documents 
+    and Media Library and then click the file's *Info* button 
+    (![Info](../../../images/icon-information.png)) 
+    to open the info panel. The *URL* link in the info panel contains the file's 
+    URL. 
+
+## Related Topics
+
+[Accessing the Liferay Session in Android](/develop/tutorials/-/knowledge_base/7-0/accessing-the-liferay-session-in-android)
