@@ -44,14 +44,49 @@ do so:
 
 3.  Use the session and the headers to retrieve a file from the portal. Note 
     that how you do this depends on the file you're retrieving and your 
-    server---there's no average or typical use case. 
+    server. 
 
-    Note that to get a file from the Documents and Media Library, you must use 
-    that file's URL. To get such a file's URL, click the file in the Documents 
-    and Media Library and then click the file's *Info* button 
+    To get a file from the Documents and Media Library, you must use that file's 
+    URL. To get the URL, click the file in the Documents and Media Library and 
+    then click the file's *Info* button 
     (![Info](../../../images/icon-information.png)) 
     to open the info panel. The *URL* link in the info panel contains the file's 
     URL. 
+
+    Here's an example that uses the third-party Android library 
+    [OkHttp](https://square.github.io/okhttp/) 
+    to get a file from the Documents and Media Library. Note that as the first 
+    two steps describe, `LiferayServerContext.getAuthHeaders()` gets the headers 
+    and `SessionContext.createSessionFromCurrentSession()` gets the session. 
+    This example also calls the session's `getAuthentication()` method to get an 
+    `Authentication` object, which is then used to authenticate the request 
+    before making the server call: 
+
+        OkHttpClient client = new OkHttpClient();
+
+        String url = "http://localhost:8080/documents/20143/72155/somefile.jpg";
+
+        Request request = new Request.Builder()
+            .url(url)
+            .headers(Headers.of(LiferayServerContext.getAuthHeaders()))
+            .get()
+            .build();
+
+        Session session = SessionContext.createSessionFromCurrentSession();
+        Authentication auth = session.getAuthentication();
+        request.authenticate(auth);
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Request request, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Response response) throws IOException {
+                // Response will contain the file.
+            }
+        });
 
 ## Related Topics
 
