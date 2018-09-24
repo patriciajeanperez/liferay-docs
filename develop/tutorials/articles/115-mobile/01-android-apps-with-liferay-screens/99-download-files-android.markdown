@@ -42,6 +42,24 @@ do so:
 
         Map<String, String> headers = LiferayServerContext.getAuthHeaders();
 
+3.  Create a request. How you do this depends on how you want to make the 
+    request. This example uses the third-party Android library 
+    [OkHttp](https://square.github.io/okhttp/), 
+    so it creates an OkHttp `Request` object. Also note that this example gets 
+    and sets the headers for the request: 
+
+        Request request = new Request.Builder()
+            .url(url)
+            .headers(Headers.of(LiferayServerContext.getAuthHeaders()))
+            .get()
+            .build();
+
+4.  Get the `Authentication` object from the session, and use it to authenticate 
+    the request. 
+
+        Authentication auth = session.getAuthentication();
+        auth.authenticate(request);
+
 3.  Use the session and the headers to retrieve a file from the portal. Note 
     that how you do this depends on the file you're retrieving and your 
     server. 
@@ -74,7 +92,7 @@ do so:
 
         Session session = SessionContext.createSessionFromCurrentSession();
         Authentication auth = session.getAuthentication();
-        request.authenticate(auth);
+        auth.authenticate(request);
 
         client.newCall(request).enqueue(new Callback() {
             @Override
