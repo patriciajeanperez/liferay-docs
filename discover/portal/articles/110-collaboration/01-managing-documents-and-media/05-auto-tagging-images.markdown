@@ -1,7 +1,7 @@
-# Auto-tagging Images
+# Auto-tagging Images [](id=auto-tagging-images)
 
 With 
-[auto-tagging enabled](/discover/portal/-/knowledge_base/7-2/auto-tagging-assets), 
+[asset auto-tagging enabled](/discover/portal/-/knowledge_base/7-2/auto-tagging-assets), 
 @product@ automatically 
 [tags](/discover/portal/-/knowledge_base/7-2/tagging-content) 
 images uploaded to the Documents and Media Library. This lets you use tags to 
@@ -10,15 +10,19 @@ auto-tagging in @product@ is based on
 [TensorFlow's `LabelImage` sample for Java](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/java/src/main/java/org/tensorflow/examples/LabelImage.java), 
 and uses the Inception5h model. 
 
+This article shows you how to configure auto-tagging for images. As you'll see, 
+you can control which instances image auto-tagging is enabled for, and how the 
+tags are applied. 
+
 ![Figure 1: The train in this image was auto-tagged with the tags *freight car* and *electric locomotive*.](../../../images/auto-tagging-images.png)
 
-## Configuring Image Auto-tagging
+## Configuring Image Auto-tagging [](id=configuring-image-auto-tagging)
 
-Image auto-tagging is enabled by default on any instance that has auto-tagging 
-enabled. For instructions on enabling auto-tagging for an instance, see 
+By default, image auto-tagging is enabled in any instance in which asset 
+auto-tagging is enabled. For instructions on enabling asset auto-tagging, see 
 [the article on auto-tagging assets](/discover/portal/-/knowledge_base/7-2/auto-tagging-assets). 
-You can also configure how image auto-tagging functions. To do so, follow these 
-steps: 
+You can, however, change this default behavior. You can also configure how image 
+auto-tagging functions. To do so, follow these steps: 
 
 1.  Go to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*, then 
     select *Documents and Media*. 
@@ -40,7 +44,7 @@ steps:
 
 ![Figure 2: Configure image auto-tagging for the instances in your portal.](../../../images/auto-tagging-image-settings.png)
 
-### Overriding Image Auto-tagging Settings for Specific Instances
+### Overriding Image Auto-tagging Settings for Specific Instances [](id=overriding-image-auto-tagging-settings-for-specific-instances)
 
 You can also override the above image auto-tagging settings for specific 
 instances. Follow these steps to do so: 
@@ -55,7 +59,7 @@ instances. Follow these steps to do so:
 
 ![Figure 3: Configure image auto-tagging for a specific instance.](../../../images/auto-tagging-image-instance.png)
 
-## Additional Auto-tagging Providers
+## Additional Auto-tagging Providers [](id=additional-auto-tagging-providers)
 
 TensorFlow is the default image auto-tagging provider in Liferay CE Portal and 
 Liferay DXP. Liferay DXP, however, contains two additional image auto-tagging 
