@@ -1,12 +1,12 @@
 # Auto-tagging Images [](id=auto-tagging-images)
 
-[Tagging](/discover/portal/-/knowledge_base/7-2/tagging-content) 
-images lets you use tags to find and organize images. With 
+[Tags](/discover/portal/-/knowledge_base/7-2/tagging-content) 
+let you find and organize files, including images. With 
 [asset auto-tagging enabled](/discover/portal/-/knowledge_base/7-2/auto-tagging-assets), 
 @product@ by default automatically 
 [tags](/discover/portal/-/knowledge_base/7-2/tagging-content) 
-images uploaded to the Documents and Media Library. This delivers the benefits 
-of tags without the extra work, since nobody has to manually tag images. 
+images uploaded to the Documents and Media Library. This lets you use tags 
+without requiring anyone to manually apply them. 
 
 You can, however, change this default behavior so that image auto-tagging must 
 be manually enabled for each instance you want to use it in. You can also change 
@@ -42,10 +42,12 @@ You can, however, change this default behavior. You can also configure how
         this value for specific instances, as the next section shows. 
 
     -   **Confidence Threshold:** TensorFlow assigns a confidence level between 
-        0 and 1 for each tag. This field sets the minimum confidence level that 
-        TensorFlow needs to apply a tag. Note that you can override this value 
-        for specific instances, as the next section shows. 
-        <!-- I'm assuming 1 is high confidence and 0 is low confidence? -->
+        0 and 1 for each tag, where 1 is the highest confidence and 0 is the 
+        lowest. This field sets the minimum confidence level that TensorFlow 
+        needs to apply a tag. Higher values yield fewer tags because TensorFlow 
+        needs more confidence before it applies a tag. Likewise, lower values 
+        yield more tags. You can override this value for specific instances, as 
+        the next section shows. 
 
 3.  Click *Save* to save your changes. 
 
@@ -68,15 +70,15 @@ instances. Follow these steps to do so:
 
 ## Additional Auto-tagging Providers [](id=additional-auto-tagging-providers)
 
-TensorFlow is the default image auto-tagging provider in Liferay CE Portal and 
-Liferay DXP. Liferay DXP, however, contains two additional image auto-tagging 
-providers. You can configure these providers in the same places that you 
-configure the TensorFlow provider, as the previous sections describe: 
+TensorFlow is the default image auto-tagging provider. Liferay DXP, however, 
+contains two additional such providers. You can configure them in the same 
+places that you configure the TensorFlow provider, as the previous sections 
+describe: 
 
 -   **Google Cloud Vision:** This provider uses the 
     [Google Cloud Vision API](https://cloud.google.com/vision/) 
-    to automatically tag images. Note that you must provide a valid API key. For 
-    more information, see 
+    to automatically tag images. You must provide a valid API key. For more 
+    information, see 
     [Google's documentation on API keys](https://cloud.google.com/docs/authentication/api-keys). 
 
     ![Figure 4: The Google Cloud Vision provider requires an API key.](../../../images/auto-tagging-image-google.png)
@@ -85,7 +87,7 @@ configure the TensorFlow provider, as the previous sections describe:
     [Microsoft Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/) 
     to automatically tag images. Note that you must provide a valid 
     [API key](https://azure.microsoft.com/en-us/try/cognitive-services/my-apis/?apiSlug=computer-services) 
-    and endpoint. For more information, see the
+    and an endpoint. For more information, see the 
     [Microsoft Cognitive Services documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/). 
 
-    ![Figure 5: The Microsoft Cognitive Services provider requires an API key and endpoint.](../../../images/auto-tagging-image-microsoft.png)
+    ![Figure 5: The Microsoft Cognitive Services provider requires an API key and an endpoint.](../../../images/auto-tagging-image-microsoft.png)
