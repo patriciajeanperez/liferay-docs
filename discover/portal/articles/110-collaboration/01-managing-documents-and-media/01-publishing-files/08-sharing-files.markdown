@@ -1,4 +1,4 @@
-# Sharing Files
+# Sharing Files [](id=sharing-files)
 
 @product@ contains a fine-grained permissions system that lets administrators 
 define the actions that users can take on files. As with all permissions in 
@@ -22,7 +22,7 @@ file to the receiving user. The user sharing the file must grant at least the
 View permission. The users must also be part of the same instance, but don't 
 have to be members of the same site. 
 
-## Sharing Files in Documents and Media
+## Sharing Files in Documents and Media [](id=sharing-files-in-documents-and-media)
 
 To share a file, you must have at least View permission on that file. You must 
 share files via either the Documents and Media app in Site Administration, or 
@@ -77,7 +77,7 @@ Follow these steps to share a file:
 
 ![Figure 1: To share a file, you must fill out the Share dialog as described in the previous steps.](../../../../images/sharing-file.png)
 
-## Working with Shared Files
+## Working with Shared Files [](id=working-with-shared-files)
 
 You can access shared files in three places: 
 
@@ -104,7 +104,7 @@ You can access shared files in three places:
 
     ![Figure 3: The Shared With Me app lists all the files that other users shared with you.](../../../../images/sharing-app.png)
 
-## Managing Shared Files
+## Managing Shared Files [](id=managing-shared-files)
 
 What if you shared a file with a user who you didn't intend to share it with? 
 What if you want to see a list of users you shared a file with? What if you want 
@@ -119,13 +119,13 @@ steps to do so:
 2.  Click the *Manage Collaborators* link. This opens a dialog with a list of 
     the users you shared the file with, and their permissions on the file. 
 
+    ![Figure 4: Click *Manage Collaborators* to open up the list of users you shared the file with.](../../../../images/sharing-info.png)
+
 3.  Make any changes you want to the list of collaborators. To un-share the file 
     with a user, click the `x` icon next to that user. You can also change the 
     file permissions via the selector menu for each user. 
 
 4.  Click *Save* and close the dialog. 
-
-![Figure 4: Click *Manage Collaborators* to open up the list of users you shared the file with.](../../../../images/sharing-info.png)
 
 ![Figure 5: The Collaborators dialog lets remove users from the list or change their permissions for the file.](../../../../images/sharing-collaborators.png)
 
