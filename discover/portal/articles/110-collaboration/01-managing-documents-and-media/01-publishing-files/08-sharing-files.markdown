@@ -1,21 +1,21 @@
 # Sharing Files [](id=sharing-files)
 
-@product@ contains a fine-grained permissions system that lets administrators 
-define the actions that users can take on files. As with all permissions in 
-@product@, 
-[permissions for files are granted via roles](/discover/portal/-/knowledge_base/7-2/adding-files-to-a-document-library#granting-file-permissions-and-roles). 
-Administrators can therefore let users collaborate on files by assigning the 
-appropriate file permissions to a role, and then assigning those users to that 
-role. Similarly, non-administrative users can grant permissions for files they 
-own to specific roles. 
+@product@'s 
+[role-based permissions system](/discover/portal/-/knowledge_base/7-2/roles-and-permissions) 
+lets administrators define the actions that users can take on assets, including 
+[files](/discover/portal/-/knowledge_base/7-2/adding-files-to-a-document-library#granting-file-permissions-and-roles). 
+Administrators can let users collaborate on files by assigning the appropriate 
+file permissions to a role, and then assigning those users to that role. 
+Similarly, non-administrative users can grant permissions for files they own to 
+specific roles. 
 
-But what if a non-administrative user wants to share files with a subset of 
-users in one or more roles? What if a non-administrative user wants to share 
-files with a single user? Instead of asking an administrator to create a new 
-role and assign users to it, non-administrative users can share files directly 
-with each other. This lets users share files without requiring direct 
-intervention from an administrator, which saves time and effort for everyone. 
-After all, sharing is caring. 
+There are certain situations, however, where this role-based permissions system 
+falls short. For example, if an appropriate role doesn't exist, users must ask 
+an administrator to create it and assign users to it. @product@'s sharing 
+feature solves this problem by letting users share files directly with each 
+other. This lets users share files without requiring intervention from an 
+administrator, which saves time and effort for everyone. After all, sharing is 
+caring. 
 
 When a user shares a file, that user grants some of their permissions for that 
 file to the receiving user. The user sharing the file must grant at least the 
