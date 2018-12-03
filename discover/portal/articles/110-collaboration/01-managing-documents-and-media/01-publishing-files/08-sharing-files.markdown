@@ -2,20 +2,20 @@
 
 @product@'s 
 [role-based permissions system](/discover/portal/-/knowledge_base/7-2/roles-and-permissions) 
-lets administrators define the actions that users can take on assets, including 
+lets administrators choose which actions users can take on assets, including 
 [files](/discover/portal/-/knowledge_base/7-2/adding-files-to-a-document-library#granting-file-permissions-and-roles). 
 Administrators can let users collaborate on files by assigning the appropriate 
-file permissions to a role, and then assigning those users to that role. 
-Similarly, non-administrative users can grant permissions for files they own to 
-specific roles. 
+file permissions to a role, and then assigning users to that role. Similarly, 
+non-administrative users can grant permissions to roles for files they own. 
 
-There are certain situations, however, where this role-based permissions system 
-falls short. For example, if an appropriate role doesn't exist, users must ask 
-an administrator to create it and assign users to it. @product@'s sharing 
-feature solves this problem by letting users share files directly with each 
-other. This lets users share files without requiring intervention from an 
-administrator, which saves time and effort for everyone. After all, sharing is 
-caring. 
+This role-based permissions system sometimes falls short. For example, if a role 
+appropriate for file collaboration doesn't exist, an administrator must create 
+it and set its users and permissions. Non-administrative users can't create or 
+manage roles. Also, if a user wants to share a file with one other user, it's 
+not practical for an administrator to create and manage a role for only two 
+users. @product@'s sharing feature solves these problems by letting users share 
+files directly with each other, without involving an administrator. This saves 
+time and effort for everyone. After all, sharing is caring. 
 
 When a user shares a file, that user grants some of their permissions for that 
 file to the receiving user. The user sharing the file must grant at least the 
@@ -128,4 +128,3 @@ steps to do so:
 4.  Click *Save* and close the dialog. 
 
 ![Figure 5: The Collaborators dialog lets remove users from the list or change their permissions for the file.](../../../../images/sharing-collaborators.png)
-
