@@ -17,16 +17,19 @@ users. @product@'s sharing feature solves these problems by letting users share
 files directly with each other, without involving an administrator. This saves 
 time and effort for everyone. After all, sharing is caring. 
 
-When a user shares a file, that user grants some of their permissions for that 
-file to the receiving user. The user sharing the file must grant at least the 
-View permission. The users must also be part of the same instance, but don't 
-have to be members of the same site. 
+When you share a file, you grant some of your own permissions for that file to 
+the receiving user. There are, however, some important restrictions on this: 
 
-When a user shares a file (the sharing user), that user selects from and grants 
-their own permissions for that file to the receiving user. The sharing user must 
-grant at least View permission, and can't grant any permissions they don't have. 
-The users must also be part of the same instance, but don't have to be members 
-of the same site. 
+-   You can only grant View, Comment, or Update permissions, even if you have 
+    additional permissions on the file. For example, you can't grant Delete 
+    permission even if you have that permission on the file. 
+-   You can only grant the permissions you have on the file. For example, you 
+    can't grant Update permission if you only have View and Comment permissions 
+    on the file. 
+-   You must grant at least View permission. 
+
+Also note that the receiving user must be part of the same instance, but doesn't 
+have to be a member of the same site. 
 
 ## Sharing Files in Documents and Media [](id=sharing-files-in-documents-and-media)
 
