@@ -20,12 +20,12 @@ time and effort for everyone. After all, sharing is caring.
 When you share a file, you grant some of your own permissions for that file to 
 the receiving user. There are, however, some important restrictions on this: 
 
--   You can only grant View, Comment, or Update permissions, even if you have 
-    additional permissions on the file. For example, you can't grant Delete 
-    permission even if you have that permission on the file. 
--   You can only grant the permissions you have on the file. For example, you 
-    can't grant Update permission if you only have View and Comment permissions 
-    on the file. 
+-   You can only grant View, Comment, or Update permissions. For example, you 
+    can't grant Delete or Override Checkout permissions even if you have those 
+    permissions on the file. 
+-   You can only grant permissions you have on the file. For example, you can't 
+    grant Update permission if you only have View and Comment permissions on the 
+    file. 
 -   You must grant at least View permission. 
 
 Also note that the receiving user must be part of the same instance, but doesn't 
