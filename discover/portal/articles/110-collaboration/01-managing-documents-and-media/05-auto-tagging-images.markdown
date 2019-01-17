@@ -21,6 +21,12 @@ and uses the Inception5h model.
 
 $$$
 
++$$$
+
+**Note:** Tags applied automatically are currently English only. 
+
+$$$
+
 ![Figure 1: The tags *freight car* and *electric locomotive* were automatically applied to this image.](../../../images/auto-tagging-images.png)
 
 ## Configuring Image Auto-tagging [](id=configuring-image-auto-tagging)
