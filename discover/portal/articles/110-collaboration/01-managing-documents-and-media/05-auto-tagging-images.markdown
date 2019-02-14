@@ -15,9 +15,12 @@ things.
 
 +$$$
 
-**Note:** Image auto-tagging in @product@ is based on 
+**Note:** By default, image auto-tagging in @product@ is based on 
 [TensorFlow's `LabelImage` sample for Java](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/java/src/main/java/org/tensorflow/examples/LabelImage.java), 
-and uses the Inception5h model. 
+and uses the Inception5h model. You can, however, use Google Cloud Vision or 
+Microsoft Cognitive Services for auto-tagging instead. See 
+[Additional Auto-tagging Providers](#additional-auto-tagging-providers) 
+for more information. 
 
 $$$
 
@@ -76,7 +79,7 @@ instances. Follow these steps to do so:
 
 ## Additional Auto-tagging Providers [](id=additional-auto-tagging-providers)
 
-TensorFlow is the default image auto-tagging provider. Liferay DXP, however, 
+TensorFlow is the default image auto-tagging provider. @product@, however, 
 contains two additional such providers. You can configure them in the same 
 places that you configure the TensorFlow provider, as the previous sections 
 describe: 
