@@ -17,6 +17,13 @@ users. @product@'s sharing feature solves these problems by letting users share
 files directly with each other, without involving an administrator. This saves 
 time and effort for everyone. After all, sharing is caring. 
 
++$$$
+
+**Note:** Administrators can disable sharing. For instructions on this, see 
+[Configuring Sharing](/discover/portal/-/knowledge_base/7-2/configuring-sharing). 
+
+$$$
+
 When you share a file, you grant some of your own permissions for that file to 
 the receiving user. There are, however, some important restrictions on this: 
 
