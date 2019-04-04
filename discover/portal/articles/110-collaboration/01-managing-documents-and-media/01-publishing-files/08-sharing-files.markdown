@@ -40,9 +40,9 @@ have to be a member of the same site.
 
 ## Sharing Files in Documents and Media [](id=sharing-files-in-documents-and-media)
 
-To share a file, you must be the owner or an administrator. You must 
-share files via the Documents and Media app in Site Administration, or the 
-Documents and Media widget on a page. 
+To share a file, you must be the owner or an administrator. You must share files
+via the Documents and Media app in Site Administration, or the Documents and
+Media widget on a page.
 
 Follow these steps to share a file: 
 
@@ -67,15 +67,14 @@ Follow these steps to share a file:
     (![Actions](../../../../images/icon-actions.png)) 
     and select *Share*. This opens the Share dialog. 
 
-3.  Enter the name or email address of the user you want to share the file with. To 
-    share the file with multiple users, enter each user's email address in a 
-    comma delimited list. 
+3.  Enter the name or email address of the user you want to share the file
+    with. To share the file with multiple users, enter each user's email address
+    in a comma delimited list.
 
-4.  To let receiving users also share the file, select 
-    *Allow the document to be shared with other users*. Unselect this option to 
-    prevent receiving users from sharing the file. Note, however, that if any 
-    users are administrators, they can share the file regardless of your 
-    selection here. 
+4.  To let receiving users also share the file, select *Allow the document to be
+    shared with other users*. Unselect this option to prevent receiving users
+    from sharing the file. Note, however, that if any users are administrators,
+    they can share the file regardless of your selection here.
 
 5.  Select the file permissions to grant to receiving users. Because you can 
     only grant your own permissions for the file, some of these options may be 
@@ -121,9 +120,11 @@ You can access files shared with you in three places:
 
 ## Managing Shared Files [](id=managing-shared-files)
 
-After sharing a file, you can unshare it or modify its permissions on a per-user 
-basis. The document owner, administrators, or any user with both Update permission and the ability to share will be able to manage the shared file. You can take these actions from the file's Info panel in Documents and 
-Media. Follow these steps to do so: 
+After sharing a file, you can unshare it or modify its permissions on a per-user
+basis. The document owner, administrators, or any user with both Update
+permission and the ability to share will be able to manage the shared file. You
+can take these actions from the file's Info panel in Documents and Media. Follow
+these steps to do so:
 
 1.  Click the file in Documents and Media, then click the *Info* button 
     (![Info](../../../../images/icon-information.png)) 
