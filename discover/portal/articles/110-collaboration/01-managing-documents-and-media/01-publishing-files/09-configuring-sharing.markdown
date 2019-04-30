@@ -2,7 +2,7 @@
 
 Administrators can choose whether 
 [file sharing](/discover/portal/-/knowledge_base/7-2/sharing-files) 
-is enabled at the global, instance, and site levels. 
+is enabled at the global, instance, and Site levels. 
 
 ## Global Configuration [](id=global-configuration)
 
@@ -34,23 +34,26 @@ portal.
 
 To enable or disable sharing on a per-instance basis, follow these steps: 
 
-1.  Go to *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings*. 
+1.  Go to *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings* 
+    &rarr; *Sharing*. 
 
-2.  Select the *Miscellaneous* tab.
+2.  Select *Virtual Instance Sharing* under *VIRTUAL INSTANCE SCOPE*. 
 
-3.  Expand the *Sharing* section and use the toggle to enable or disable sharing 
-    for the instance. 
+3.  Check or uncheck the *Enabled* checkbox to enable or disable sharing, 
+    respectively. 
 
-![Figure 2: You can enable or disable sharing for each instance.](../../../../images/sharing-toggle.png)
+![Figure 2: You can enable or disable sharing for each instance.](../../../../images/sharing-instance.png)
 
 ## Site Configuration [](id=site-configuration)
 
-To enable or disable sharing for a site, follow these steps: 
+To enable or disable sharing for a Site, follow these steps: 
 
 1.  Go to Site Administration (your site's menu) &rarr; *Configuration* &rarr; 
-    *Site Settings*. 
+    *Settings*. 
 
 2.  Select the *General* tab. 
 
 3.  Expand the *Sharing* section and use the toggle to enable or disable sharing 
-    for the site. 
+    for the Site. 
+
+![Figure 3: You can enable or disable sharing for each Site.](../../../../images/sharing-toggle.png)
